@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.practicum.MainPageObject;
 import ru.practicum.OrderObj;
-
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -24,7 +23,6 @@ public class parametrizedOrderLower extends TestMain{
     private final String arenda;
     private final String colour;
     private final String comment;
-
 
     public parametrizedOrderLower(String name, String surname, String adress, String station, String phone, String date, String arenda, String colour, String comment) {
         this.name = name;

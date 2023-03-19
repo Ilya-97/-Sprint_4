@@ -7,28 +7,20 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.practicum.MainPageObject;
-
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
-
 public class QuestionsAndAnswers extends TestMain{
-
         private WebDriver driver;
         @Test
         public void checkQA(){
-
                 ChromeOptions options = new ChromeOptions();
                 driver = new ChromeDriver(options);
                 driver.get("https://qa-scooter.praktikum-services.ru/");
                 new WebDriverWait(driver, 3)
                         .until(ExpectedConditions.elementToBeClickable(By.xpath(".//div[@class = 'Home_Header__iJKdX']")));
 
-
-
-
                 MainPageObject objectFirst = new MainPageObject(driver);
                 objectFirst.clickCookie();
-
 
                 //Список вопросов
                 String [] questions = {
@@ -53,7 +45,6 @@ public class QuestionsAndAnswers extends TestMain{
                         "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.",
                         "Да, обязательно. Всем самокатов! И Москве, и Московской области."
                 };
-
 
                 for (int i = 0; i < answers.length; i++){
                         assertThat(objectFirst.checkQuestionsText(i), containsString(questions[i]));

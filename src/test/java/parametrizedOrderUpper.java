@@ -9,10 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.practicum.MainPageObject;
 import ru.practicum.OrderObj;
-
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
-
 @RunWith(Parameterized.class)
 public class parametrizedOrderUpper extends TestMain{
     private final String name;
@@ -25,7 +23,6 @@ public class parametrizedOrderUpper extends TestMain{
     private final String colour;
     private final String comment;
 
-
     public parametrizedOrderUpper(String name, String surname, String adress, String station, String phone, String date, String arenda, String colour, String comment) {
         this.name = name;
         this.surname = surname;
@@ -37,7 +34,6 @@ public class parametrizedOrderUpper extends TestMain{
         this.colour = colour;
         this.comment = comment;
     }
-
     @Parameterized.Parameters
     public static Object[][] getData(){
         return new Object[][]{
@@ -53,7 +49,6 @@ public class parametrizedOrderUpper extends TestMain{
 
         };
     }
-
     @Test
     public void ParametrizedCheckTest(){
 

@@ -4,11 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-
 public class MainPageObject {
     public WebDriver driver;
-
 
     //локатор кнопки "да все привыкли"
     private By cookieButton = By.className("App_CookieButton__3cvqF");
@@ -23,14 +20,12 @@ public class MainPageObject {
         this.driver = driver;
     }
 
-
     //нажатие на кнопку "да все привыкли"
     public void clickCookie(){
         WebElement element = driver.findElement(cookieButton);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         driver.findElement(cookieButton).click();
     }
-
 
     //Нажатие на верхнюю кнопку "Заказать"
     public void clickOrderUpper(){
@@ -42,7 +37,6 @@ public class MainPageObject {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
         driver.findElement(orderUpper).click();
     }
-
 
     //поиск и проверка открытия вопросов и ответов
     public void checkQuestionsAndAnswers(int rowCount){
