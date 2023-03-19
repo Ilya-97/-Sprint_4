@@ -1,5 +1,5 @@
 
-import org.openqa.selenium.WebDriver;
-public class TestMain {
-    WebDriver driver;
-}
+    import org.openqa.selenium.WebDriver;
+    public class TestMain {
+        WebDriver driver;
+    }
