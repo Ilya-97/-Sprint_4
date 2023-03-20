@@ -49,8 +49,8 @@
             return driver.findElement(By.id(String.format("accordion__heading-%d", rowCount))).getText();
         }
         //поиск и проверка текста выпадающих ответов
-        public String checkAnswersText(int rowCount){
-            return driver.findElement(By.xpath(String.format(".//div[@aria-labelledby = 'accordion__heading-%d']/p", rowCount))).getText();
+        public String checkAnswersText(String text){
+            return driver.findElement(By.xpath(String.format(".//p[text() = '%s']", text))).getText();
         }
 
 

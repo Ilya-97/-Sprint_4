@@ -25,10 +25,6 @@
         private By inputDate = By.xpath(".//input[@class = 'Input_Input__1iN_Z Input_Responsible__1jDKN']");
         //поле срока аренды
         private By inputArenda = By.xpath(".//div[@class = 'Dropdown-arrow-wrapper']/span[@class = 'Dropdown-arrow']");
-        //чекбокс "черный жемчуг"
-        //private By checkboxBlack = By.xpath(".//input[@id = 'black' and @type = 'checkbox']");
-        //чекбокс "серая безысходность"
-        //private By checkboxGray = By.xpath(".//input[@id = 'grey' and @type = 'checkbox']");
         //поле для комментария курьеру
         private By inputComment = By.xpath((".//input[@placeholder = 'Комментарий для курьера']"));
         //кнопка "Далее" на первом экране заказа
@@ -83,17 +79,6 @@
             ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
             return driver.findElement(orderCreatedPopUp).getText();
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
